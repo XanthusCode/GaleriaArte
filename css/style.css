@@ -275,40 +275,38 @@ header h4 {
 
 
 
-/* Estilo para el título */
 #section h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2em; /* Tamaño de fuente opcional para el título */
+    font-size: 2em; 
 }
 
 
 .plan{
     display: flex;
-    justify-content: space-around; /* Espacio igual entre los contenedores */
-    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    justify-content: space-around; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
 }
 
-/* Estilo para los contenedores de enlaces */
+
 .links {
     display: flex;
-    flex-direction: column; /* Organiza los elementos en una columna dentro de cada enlace */
-    align-items: center; /* Centra el contenido dentro de cada contenedor de enlace */
-    margin: 0 20px; /* Espacio horizontal entre los contenedores */
-    text-align: center; /* Centra el texto dentro de los contenedores de enlace */
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0 20px; 
+    text-align: center; 
     padding: 10px;
 }
 
-/* Estilo para los íconos */
+
 .links i {
-    font-size: 2em; /* Tamaño del ícono */
-    margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+    font-size: 2em; 
+    margin-bottom: 10px; 
 }
 
-/* Estilo para los párrafos y spans dentro de los enlaces */
 .links p, .links span {
-    margin: 5px 0; /* Espacio vertical entre los elementos */
+    margin: 5px 0; 
 }
 
 .links p{
@@ -420,22 +418,34 @@ footer {
         margin-bottom: 0;
     }
 
-    .home h4,
-    .home h2{
-        color: white;
+    #home {
+        height: 50vh; 
+        padding: 0 40px; 
     }
 
+    #home h4, #home p, #home button {
+        font-size: 14px; 
+    }
+
+    #home button {
+        padding: 10px 50px; 
+    }
+
+    .button-container {
+        flex-direction: column; 
+        gap: 10px; 
+    }
 
     .product-container {
-        max-width: 100%; /* Asegúrate de que el contenedor no se salga de la pantalla */
+        max-width: 100%;
     }
 
     .des h5 {
-        font-size: 1em; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+        font-size: 1em; 
     }
 
     .des p {
-        font-size: 0.8em; /* Reduce el tamaño del texto del párrafo */
+        font-size: 0.8em; 
     }
 
 
@@ -498,6 +508,26 @@ footer {
         padding: 10px;
 
     }
+
+    #home {
+        height: 40vh; 
+        padding: 0 20px; 
+    }
+
+    #home h4, #home p, #home button {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    #home button {
+        padding: 8px 30px; 
+    }
+
+    .button-container {
+        flex-direction: column; 
+        gap: 5px; 
+    }
+
     .product-container {
         width: 100%;
     }
@@ -506,17 +536,23 @@ footer {
         font-size: 1.5em;
     }
 
-    .links i {
-        font-size: 1.5em; 
+    .footer-container {
+        flex-direction: column; 
+        text-align: center; 
     }
 
-    .footer-text{
-        margin: 15px;
-        text-align: center;
+    .footer-left {
+        margin-bottom: 10px; 
     }
 
-    .footer-text a{
-        margin: 0;
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        gap: 5px; 
+    }
+
+    .footer-right a {
+        margin-left: 0; 
     }
 
 }
