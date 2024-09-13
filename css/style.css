@@ -273,53 +273,82 @@ header h4 {
 }
 
 
-/* =============== FOOTER ================*/
-footer{
-    background-color: #d4d4d4 ;
-    margin-top: 100px;
-    color: var(--titulos);
-    display: grid;
-    grid-template-columns: repeat(5,2fr);
 
-}
-.footer-text{
-    padding-left: 15px;
+
+/* Estilo para el título */
+#section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em; /* Tamaño de fuente opcional para el título */
 }
 
-.footer-text h3{
-    margin: 50px;
-    width: 30px;
-    max-width: 100px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid  #424242;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
 
-.footer-text a{
-    margin:  0 0 10px 50px;
-    color: var(--text);
-    text-decoration: none;
+.plan{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around; /* Espacio igual entre los contenedores */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
 }
 
-.links i{
-    cursor: pointer;
+/* Estilo para los contenedores de enlaces */
+.links {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna dentro de cada enlace */
+    align-items: center; /* Centra el contenido dentro de cada contenedor de enlace */
+    margin: 0 20px; /* Espacio horizontal entre los contenedores */
+    text-align: center; /* Centra el texto dentro de los contenedores de enlace */
+    padding: 10px;
+}
+
+/* Estilo para los íconos */
+.links i {
+    font-size: 2em; /* Tamaño del ícono */
+    margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilo para los párrafos y spans dentro de los enlaces */
+.links p, .links span {
+    margin: 5px 0; /* Espacio vertical entre los elementos */
+}
+
+.links p{
+    color: #222;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+
+
+/* =============== FOOTER ================*/
+footer {
+    background-color: var(--titulos); 
     color: white;
-    background-color: transparent;
-    border-radius: 50px;
-    padding: 7px;
-    margin: 10px 5px;
-    box-shadow: 1px 1px 40px -6px #000;
-    transition: all .5s;
+    padding: 20px;
+    margin-top: 100px; 
 }
 
-.links i:hover{
-    background-color: cadetblue;
-    transform: scale(1.04);
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
 }
 
+
+.footer-left {
+    margin: 0; 
+}
+
+
+.footer-right {
+    margin: 0; 
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none; 
+    margin: 0 10px; 
+}
 
 
 
@@ -397,58 +426,18 @@ footer{
     }
 
 
-    .products{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        gap: 20px;
-        align-items: center;
-    }
     .product-container {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        max-width: 100%; /* Asegúrate de que el contenedor no se salga de la pantalla */
     }
 
-    .content-somos,
-    .valores{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-     h1, h2{
-        font-size: 30px;
+    .des h5 {
+        font-size: 1em; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
     }
 
-    p{
-        margin: 10px;
+    .des p {
+        font-size: 0.8em; /* Reduce el tamaño del texto del párrafo */
     }
 
-    .valores ul  li a{
-        width: 100%;
-        margin: 5px 0;
-        background-color: transparent;
-    }
-
-    #prodetails{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #prodetails .single-pro-image{
-        width: 100%;
-        margin-right: 0;
-    }
-
-    #prodetails .single-pro-details{
-        width: 100%;
-    }
-
-    .apple h4{
-        font-size: 25px;
-        font-weight: bold;
-    }
 
     footer{
         grid-template-columns: 100%;
@@ -467,18 +456,16 @@ footer{
         text-align: center;
     }
 
-    /* Cart page */
-    #cart-add{
-        flex-direction: column;
+    .plan{
+    flex-direction: column; /* Organiza los contenedores en una columna */
+    align-items: center; /* Centra los contenedores en pantallas pequeñas */
     }
 
-    #coupon{
-        width: 100%;
+    .links {
+        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+        max-width: none; /* Elimina el ancho máximo en pantallas pequeñas */
     }
-    #subtotal{
-        width: 100%;
-        padding: 20px;
-    }
+
 }
 
 @media (max-width: 500px){
@@ -515,6 +502,14 @@ footer{
         width: 100%;
     }
 
+    #section h2 {
+        font-size: 1.5em;
+    }
+
+    .links i {
+        font-size: 1.5em; 
+    }
+
     .footer-text{
         margin: 15px;
         text-align: center;
@@ -524,17 +519,4 @@ footer{
         margin: 0;
     }
 
-    #prodetails{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #prodetails .single-pro-image{
-        width: 100%;
-        margin-right: 0;
-    }
-
-    #prodetails .single-pro-details{
-        width: 100%;
-    }
 }
